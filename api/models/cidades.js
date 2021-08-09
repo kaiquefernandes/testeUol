@@ -7,7 +7,7 @@ exports.insertCity = async (ctx) => {
     new Date()
   ).format("YYYY-MM-DD HH:mm:ss")}")`;
   const data = await db.executeQuery(query, 0, 1000);
-  return data[0];
+  return data;
 };
 
 exports.getCity = async (ctx) => {

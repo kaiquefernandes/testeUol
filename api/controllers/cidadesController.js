@@ -35,12 +35,12 @@ exports.insertCity = async (req, res) => {
         .json({ warning: "esta faltando campo cidade ou estado" });
     }
 
-    await cidadeModel.insertCity({
+    resp = await cidadeModel.insertCity({
       cidade,
       estado,
     });
 
-    res.status(201).json("dado inserido!");
+    res.status(201).json({ "dado inserido!": resp });
   } catch (err) {
     res.status(500).json({ Error: err });
     console.log(err);
