@@ -1,5 +1,5 @@
 const cidadeModel = require('../models/cidades')
-
+let resp = '';
 exports.getCity = async (req, res) => {
     try {
 
@@ -13,7 +13,7 @@ exports.getCity = async (req, res) => {
         }
 
 
-        let resp = await cidadeModel.getCity({
+        resp = await cidadeModel.getCity({
             cidade,
              estado
         })

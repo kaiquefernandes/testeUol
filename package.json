@@ -15,15 +15,11 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "logger": "^0.0.1",
+    "moment": "^2.29.1",
     "mysql": "^2.18.1",
-    "mysql2": "^2.3.0",
-    "npkill": "^0.8.0",
-    "path": "^0.12.7",
-    "sequelize": "^6.6.5"
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "sequelize-cli": "^6.2.0"
+    "nodemon": "^2.0.7"
   }
 }

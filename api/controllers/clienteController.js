@@ -1,5 +1,5 @@
 const clienteModel = require('../models/clientes')
-
+let resp = '';
 exports.getClient = async (req, res) => {
     try {
 
@@ -12,7 +12,7 @@ exports.getClient = async (req, res) => {
             return res.status(500).json({"warning":"esta faltando parametros!"})
         }
 
-        let resp = await clienteModel.getClient({
+        resp = await clienteModel.getClient({
             id,
             nome
         })
@@ -40,7 +40,7 @@ exports.insertCliente = async (req, res) => {
             return res.status(500).json({"warning":"esta faltando parametros!"})
         }
         
-        let resp = await clienteModel.insertClient({
+        resp = await clienteModel.insertClient({
             nome,
             data_nascimento,
             sexo,
@@ -92,7 +92,7 @@ exports.deleteCliente = async (req, res) => {
             return res.status(500).json({"warning":"esta faltando parametros!"})
         }
 
-        let resp = await clienteModel.deleteClient({
+        resp = await clienteModel.deleteClient({
             id
         })
 
