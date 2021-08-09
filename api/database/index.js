@@ -1,4 +1,4 @@
-const mysql = require('mysql')
+const mysql = require("mysql");
 
 const pool = mysql.createPool({
   user: process.env.DB_USER,
@@ -7,20 +7,18 @@ const pool = mysql.createPool({
   port: process.env.DB_PORT,
   host: process.env.DB_HOST,
   insecureAuth: true,
-})
+});
 
 module.exports = {
   executeQuery: function (query) {
-   
     return new Promise(function (resolve, reject) {
       pool.query(`${query};`, function (error, results, fields) {
         if (error) {
-          reject(error)
+          reject(error);
         } else {
-          resolve(results)
+          resolve(results);
         }
-      })
-    })
+      });
+    });
   },
-
-}
+};
